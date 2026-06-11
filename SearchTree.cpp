@@ -38,4 +38,22 @@ public:
         Node *parent = NULL;
         Node *currentNode = NULL;
 
-        
+        search(element, parent, currentNode);
+
+        if (parent == NULL)
+        {
+            ROOT = newnode;
+            return;
+        }
+
+        if (element < parent->info)
+        {
+            parent->leftchild = newnode;
+        }
+        else if (element > parent->info)
+        {
+            parent->rightchild = newnode;
+        }
+    }
+
+    
