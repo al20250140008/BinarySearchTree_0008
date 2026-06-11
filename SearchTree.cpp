@@ -27,4 +27,15 @@ public:
         ROOT = NULL;
     }
 
-   
+    void insert(string element)
+    {
+        Node *newnode = new Node(element, NULL, NULL);
+
+        newnode->info = element;
+        newnode->leftchild = NULL;
+        newnode->rightchild = NULL;
+
+        Node *parent = NULL;
+        Node *currentNode = NULL;
+
+        
